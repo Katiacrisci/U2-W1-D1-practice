@@ -83,7 +83,10 @@
 /* LAYOUT DESKTOP */
 @media screen and (min-width: 1200px) {
   body {
-    color: yellow;
+    color: rgb(2, 2, 1);
+  }
+  main article h1 {
+    z-index: 2;
   }
 }
 
@@ -117,6 +120,7 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: fixed;
 }
 header div img {
   margin-bottom: 20px;
@@ -140,15 +144,36 @@ header nav li a::before {
 
 /* MAIN */
 main {
+  
   background-color: #fff;
   box-shadow: 0 3px 3px #444;
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+main article img:nth-of-type(1) {
+  margin-left: 100px;
+  transform: translateY(-9.8rem) scale(1.4, 1);
+
+}
+
+main article img:nth-of-type(2) {
+  display: inline-block;
+}
+main article p{
+  display: inline-block;
+}
 section {
   background-color: #e3e3e3;
   padding: 1em;
   margin-bottom: 2em;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  height: 300px;
+  border-radius: 20px;
+}
+section p {
+  margin-top: 20px;
 }
 section h2 {
   text-align: center;
@@ -157,6 +182,11 @@ section h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1em;
+  position: absolute;
+  transform: translate(-8rem, -5ex);
+  margin-left: 80px;
+  box-shadow: 2.5px 2px #727171;
+  padding: 15px 30px; 
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -195,10 +225,12 @@ code {
   border-radius: 5px;
 }
 iframe {
-  width: 100%;
-  height: auto;
+  width: 49%;
+  height: 300px;
   margin-bottom: 2em;
   border-radius: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* TABELLE */
@@ -231,6 +263,7 @@ tbody tr:last-of-type {
   border-bottom: 2px solid #3f6bca;
 }
 
+
 /* FORM */
 input {
   padding: 5px;
@@ -259,6 +292,10 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+  display: inline-block;
+  vertical-align: baseline;
+  
+  
 }
 aside div p:last-child {
   margin-bottom: 0;
